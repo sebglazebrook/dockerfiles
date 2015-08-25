@@ -1,5 +1,10 @@
-FROM sebglazebrook/sebian
+FROM alpine:latest
 
-RUN apt-get update -y && apt-get install -y httpie
+RUN apk update && apk add \
+      ca-certificates \
+      python \
+      py-pip \
+      && rm -rf /var/cache/apk/* \
+      && pip install httpie httpie-unixsocket
 
-ENTRYPOINT ["http"]
+ENTRYPOINT [ "http"  ]
