@@ -24,10 +24,10 @@ RUN git clone https://github.com/neovim/libvterm.git && \
   make install && \
   cd ../ && rm -rf libvterm
 
-ADD https://github.com/neovim/neovim/archive/v0.1.2.tar.gz /tmp
+ADD https://github.com/neovim/neovim/archive/v0.1.4.tar.gz /tmp
 
-RUN cd /tmp && tar -zxvf v0.1.2.tar.gz && \
-    cd neovim-0.1.2 && \
+RUN cd /tmp && tar -zxvf v0.1.4.tar.gz && \
+    cd neovim-0.1.4 && \
     cat contrib/local.mk.example | sed 's/# CMAKE_EXTRA_FLAGS += -DENABLE_JEMALLOC=OFF/CMAKE_EXTRA_FLAGS += -DENABLE_JEMALLOC=OFF/' > local.mk && \
     make && \
     make install && \

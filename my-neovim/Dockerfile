@@ -15,4 +15,5 @@ CMD ["bash"]
 
 COPY fzf /usr/local/bin
 
-# https://github.com/docker/docker/issues/8710
+RUN apk add --update vim && rm -rf /var/cache/apk/*
+RUN vim +PlugClean! +qall && vim +PlugInstall +qall
