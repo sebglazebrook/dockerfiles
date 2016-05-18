@@ -15,5 +15,7 @@ CMD ["bash"]
 
 COPY fzf /usr/local/bin
 
+ENV FZF_DEFAULT_COMMAND='ag -l --ignore-dir node_modules -g ""'
+
 RUN apk add --update vim && rm -rf /var/cache/apk/*
 RUN vim +PlugClean! +qall && vim +PlugInstall +qall
