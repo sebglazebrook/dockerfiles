@@ -1,0 +1,1 @@
+docker tag sebglazebrook/rust-stable sebglazebrook/rust-stable:latest
