@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -uex
+
+docker build --tag sebglazebrook/kubectl --no-cache .

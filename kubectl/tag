@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -uex
+
+docker tag sebglazebrook/kubectl sebglazebrook/kubectl:latest
+
